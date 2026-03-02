@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Simple SVG spaceship used as sprite -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="128" height="128">
+  <g>
+    <ellipse cx="32" cy="46" rx="12" ry="6" fill="#2b6a8f" opacity="0.9"/>
+    <path d="M32 6 L42 30 L32 24 L22 30 Z" fill="#4ee3c3"/>
+    <circle cx="32" cy="28" r="3" fill="#08324a"/>
+    <rect x="30" y="34" width="4" height="6" fill="#ffcf66" opacity="0.9"/>
+    <g opacity="0.12"><path d="M14 50 C24 38,40 38,50 50" stroke="#fff" fill="none"/></g>
+  </g>
+</svg>

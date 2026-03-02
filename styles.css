@@ -1,0 +1,27 @@
+:root{
+  --bg:#0b1020;
+  --accent:#4ee3c3;
+  --panel:rgba(255,255,255,0.06);
+}
+*{box-sizing:border-box;margin:0;padding:0;font-family:Segoe UI, Roboto, Arial,sans-serif}
+body{background:linear-gradient(180deg,#071028 0%, #0c1330 100%);color:#e6f7f2;min-height:100vh}
+.title-panel{padding:18px 24px;text-align:center;filter:drop-shadow(0 6px 18px rgba(0,0,0,0.6))}
+.title-panel h1{font-size:20px;letter-spacing:0.6px}
+.subtitle{opacity:0.85;font-size:13px}
+.container{max-width:1100px;margin:18px auto;padding:12px}
+.stage{display:flex;gap:18px;align-items:flex-start}
+.canvas-wrap{background:var(--panel);border-radius:10px;padding:12px;display:inline-block;transform-origin:center;transition:transform .35s ease}
+.canvas-wrap:hover{transform:scale(1.02) rotate(-1deg)}
+.floating{animation:floaty 6s ease-in-out infinite}
+@keyframes floaty{0%{transform:translateY(0)}50%{transform:translateY(-6px) rotate(-0.3deg)}100%{transform:translateY(0)}}
+.hud{width:230px;padding:12px;background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));border-radius:10px;backdrop-filter: blur(4px)}
+.hud{animation:glow 5s linear infinite}
+@keyframes glow{0%{filter:hue-rotate(0deg) drop-shadow(0 0 0px var(--accent))}50%{filter:hue-rotate(40deg) drop-shadow(0 6px 18px rgba(78,227,195,0.18))}100%{filter:hue-rotate(0deg) drop-shadow(0 0 0px var(--accent))}}
+.hud div{margin:8px 0}
+.instructions{margin-top:14px;padding:12px;background:rgba(255,255,255,0.02);border-radius:8px}
+.instructions h2{font-size:16px;margin-bottom:6px}
+canvas{display:block;background:linear-gradient(0deg, rgba(12,16,30,0.6), rgba(6,8,16,0.2));border-radius:6px}
+.credit{font-size:12px;opacity:0.7}
+
+/* Responsive */
+@media(max-width:900px){.stage{flex-direction:column}.hud{width:100%}}

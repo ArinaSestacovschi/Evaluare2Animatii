@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Joc Canvas Animat - Evaluare</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="title-panel">
+    <h1>Joc pe pânza Canvas — Efecte & Animații</h1>
+    <p class="subtitle">Folosiți mouse-ul pentru a controla nava. Click pentru a trage.</p>
+  </header>
+
+  <main class="container">
+    <section class="stage">
+      <div class="canvas-wrap floating">
+        <canvas id="game" width="900" height="600"></canvas>
+      </div>
+      <aside class="hud">
+        <div>FPS real: <span id="realFps">0</span></div>
+        <div>Setare FPS: <input id="fpsRange" type="range" min="15" max="120" value="60"></div>
+        <div>FPS dorit: <span id="targetFps">60</span></div>
+        <button id="pauseBtn">Pauză</button>
+        <div class="credit">Import grafică: SVG folosită ca sprite</div>
+      </aside>
+    </section>
+
+    <section class="instructions">
+      <h2>Instrucțiuni</h2>
+      <ul>
+        <li>Mută mouse-ul pentru a poziționa nava.</li>
+        <li>Click stânga pentru a trage proiectile.</li>
+        <li>Folosiți slider-ul pentru a regla rata cadrelor (FPS) — implementare cu <code>setTimeout</code>.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
